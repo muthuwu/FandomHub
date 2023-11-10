@@ -1,0 +1,15 @@
+
+<div class="create-forum-form">
+  <div class="form-section">
+    <h2>Create a New Forum</h2>
+    <div class="form-field">
+      <label for="forum-name">Forum Name:</label>
+      <input type="text" id="forum-name" placeholder="Enter Forum Name" (keyup)="getName($event)">
+    </div>
+    <div class="form-field">
+      <label for="forum-description">Forum Description:</label>
+      <textarea id="forum-description" placeholder="Enter Forum Description" (keyup)="getDesc($event)"></textarea>
+    </div>
+    <button id="submit-forum-btn" (click)="createForum()">Submit</button>
+  </div>
+</div>

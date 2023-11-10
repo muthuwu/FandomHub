@@ -1,0 +1,12 @@
+<div class="h-16 lg:flex w-full border-b border-gray-200 dark:border-gray-800 hidden px-10">
+  <!-- <button class="h-8 px-3 rounded-md shadow text-white bg-blue-500">Logout</button> -->
+  <div class="flex xl:flex-row flex-col items-center font-logo text-gray-900 dark:text-white pb-2 mb-2 w-full">
+    FandomHub
+  </div>
+  <button *ngIf="islogged()" (click)="feed()">Feed</button>
+  <button *ngIf="islogged()" (click)="profile()">Profile</button>
+  <button *ngIf="islogged()" (click)="logout()">Logout</button>
+</div>
+<div>
+  <router-outlet class="routeroutlet"></router-outlet>
+</div>

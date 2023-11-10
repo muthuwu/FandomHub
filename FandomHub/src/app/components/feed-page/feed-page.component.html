@@ -1,0 +1,130 @@
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="bg-gray-100 dark:bg-gray-900 dark:text-white text-gray-600 h-screen flex overflow-hidden text-sm">
+  <div class="flex-grow overflow-hidden h-full flex flex-col">
+    <!-- <div class="h-16 lg:flex w-full border-b border-gray-200 dark:border-gray-800 hidden px-10">
+      <button>Logout</button>
+    </div> -->
+    <div class="flex-grow flex overflow-x-hidden">
+      <div class="xl:w-72 w-48 flex-shrink-0 border-r border-gray-200 dark:border-gray-800 h-full overflow-y-auto lg:block hidden p-5">
+        <div class="text-xs text-gray-400 tracking-wider">Following Forums</div>
+        <div class="relative mt-2">
+          <!-- <input type="text" class="pl-8 h-9 bg-transparent border border-gray-300 dark:border-gray-700 dark:text-white w-full rounded-md text-sm" placeholder="Search" /> -->
+          <select #searchforum (change)="openNewForum($event)">
+            <option value="default">Search </option>
+            <option *ngFor="let allforum of allforums" [value]="allforum.forumid">
+                {{allforum.forumtitle}}
+            </option>
+        </select>
+        </div>
+        <div class="space-y-4 mt-3">
+          <button class="bg-white p-3 w-full flex flex-col rounded-md dark:bg-gray-800 shadow" *ngFor="let forum of forums" (click)="getForum(forum.forumid)">
+            <div class="flex xl:flex-row flex-col items-center font-medium text-gray-900 dark:text-white pb-2 mb-2 xl:border-b border-gray-200 border-opacity-75 dark:border-gray-700 w-full">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=046c29138c1335ef8edee7daf521ba50" class="w-7 h-7 mr-2 rounded-full" alt="profile" />
+              {{forum.forumtitle}}
+            </div>
+            <div class="flex items-center w-full">
+              {{forum.forumdesc}}
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="flex-grow bg-white dark:bg-gray-900 overflow-y-auto">
+        <div class="sm:px-7 sm:pt-7 px-4 pt-4 flex flex-col w-full border-b border-gray-200 bg-white dark:bg-gray-900 dark:text-white dark:border-gray-800 sticky top-0">
+          <div class="flex w-full items-center">
+            <div class="flex items-center text-3xl text-gray-900 dark:text-white">
+              <img src="https://assets.codepen.io/344846/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1582611188&width=512" class="w-12 mr-4 rounded-full" alt="profile" />
+              {{forum.forumtitle}}
+            </div>
+            <div class="ml-auto sm:flex hidden items-center justify-end">
+              <div class="text-right">
+                <button class="h-8 px-3 rounded-md shadow text-white bg-blue-500" *ngIf="followVisibility" (click)="followForum(forum)">Follow</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- begin profile -->
+
+<!-- end profile -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <div id="content" class="content content-full-width">
+
+            <!-- begin profile-content -->
+            <div class="profile-content">
+               <!-- begin tab-content -->
+               <div class="tab-content p-0">
+                  <!-- begin #profile-post tab -->
+                  <div class="tab-pane fade active show" id="profile-post">
+                     <!-- begin timeline -->
+                     <ul class="timeline">
+
+                        <li *ngFor="let post of posts">
+                           <!-- begin timeline-icon -->
+                           <div class="timeline-icon">
+                              <a href="javascript:;">&nbsp;</a>
+                           </div>
+                           <!-- end timeline-icon -->
+                           <!-- begin timeline-body -->
+                           <div class="timeline-body">
+                              <div class="timeline-header">
+                                 <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                 <span class="username">{{post.posttitle}}</span>
+                              </div>
+                              <div class="timeline-content">
+                                 <p class="lead">
+                                    <i class="fa fa-quote-left fa-fw pull-left"></i>
+                                    {{post.postcontent}}
+                                    <i class="fa fa-quote-right fa-fw pull-right"></i>
+                                 </p>
+                              </div>
+                              <div class="timeline-likes">
+                                <div class="stats-right">
+                                  <span class="stats-text">{{post.upvote}} Upvote(s)</span>
+                                  <span class="stats-text">{{post.comments.length}} Comment(s)</span>
+                               </div>
+                             </div>
+                              <div class="timeline-footer">
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Upvote</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                              </div>
+
+                              <div class="timeline-comment-box">
+                                <div class="user"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"></div>
+                                <div class="input">
+                                   <form action="">
+                                      <div class="input-group">
+                                         <input type="text" class="form-control rounded-corner" placeholder="Write a comment...">
+                                         <span class="input-group-btn p-l-10">
+                                         <button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button>
+                                         </span>
+                                      </div>
+                                   </form>
+                                </div>
+                             </div>
+                           </div>
+                           <!-- end timeline-body -->
+                        </li>
+                     </ul>
+                     <!-- end timeline -->
+                  </div>
+                  <!-- end #profile-post tab -->
+               </div>
+               <!-- end tab-content -->
+            </div>
+            <!-- end profile-content -->
+         </div>
+      </div>
+   </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->

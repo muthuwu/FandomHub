@@ -1,0 +1,88 @@
+<!-- <div class="container">
+	<div class="profile-header">
+		<div class="profile-pic">
+			<img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Bryan King" />
+		</div>
+		<div class="profile-info">
+			<h1>{{user.firstName}} {{user.lastName}}</h1>
+			<p>{{user.userDescription}}</p>
+			<p>{{user.email}}</p>
+			<button class="follow">Edit</button>
+			<div class="collapse">
+				<div class="links">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content" *ngFor="let forum of forums">
+    <h3>{{forum.forumtitle}}</h3>
+		<div class="posts">
+			<div class="post">
+				<div class="text">{{forum.forumdesc}}</div>
+        <div class="post-ribbon">
+					<button (click)="goToMyForum(forum.forumid)">Go In</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+  <div class="container bootstrap snippets bootdey">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+      <div class="row">
+          <div class="profile-nav col-md-3">
+              <div class="panel">
+                  <div class="user-heading round">
+                      <a href="#">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                      </a>
+                      <h1>{{user.firstName}} {{user.lastName}}</h1>
+                  </div>
+
+                  <ul class="nav nav-pills nav-stacked">
+                      <li class="active"><a > <i class="fa fa-user"></i> Profile</a></li>
+                      <li><a > <i class="fa fa-edit"></i> Edit profile</a></li>
+                      <li><a (click)="createNewForum()"> <i class="fa fa-edit"></i> Create New Forum</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="profile-info col-md-9">
+              <div class="panel">
+                <app-header></app-header>
+                  <div class="bio-graph-heading">
+                      {{user.userDescription}}
+                  </div>
+                  <div class="panel-body bio-graph-info">
+                      <h1>Bio Graph</h1>
+                      <div class="row">
+                          <div class="bio-row">
+                              <p><span>First Name </span>: {{user.firstName}}</p>
+                          </div>
+                          <div class="bio-row">
+                              <p><span>Last Name </span>: {{user.lastName}}</p>
+                          </div>
+                          <div class="bio-row">
+                              <p><span>Email </span>: {{user.email}}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <div class="au-task-list js-scrollbar3">
+
+                      <div class="au-task_item au-task_item--warning">
+                          <div class="au-task__item-inner"  *ngFor="let forum of forums">
+                              <h5 class="task">
+                                  <a href="#">{{forum.forumtitle}}</a>
+                              </h5>
+                              <span class="time">{{forum.forumdesc}} </span>
+                              <button (click)="goToMyForum(forum.forumid)">Go In</button>
+                            </div>
+                        </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
