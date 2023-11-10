@@ -82,29 +82,29 @@ Start the server
 
 #### Login page to log onto your account
 
-```http
+```
   http://localhost:4200/login
 ```
 
 #### Feed page to view the subscribed forum posts
-```http
+```
   http://localhost:4200/feed 
 ```
 #### Profile page to view the user's details 
-```http
+```
   http://localhost:4200/profile
 ```
 ### To create a new forum 
-```http
+```
 http://localhost:4200/newform 
 ```
 
 #### To view the specific forum and their respective posts
-```http
+```
   http://localhost:4200/myforum/:id
 ```
 ### To create a post under a specific forum 
-```http
+```
   :http://localhost:4200/newpost/:id
 ```
 
