@@ -66,9 +66,6 @@ Start the server
 - Run the "MongoangularApplication" to start the tomcat server to be running on http://localhost:8080 
 
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
 ## API Reference
