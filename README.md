@@ -105,5 +105,37 @@ http://localhost:4200/newform
   :http://localhost:4200/newpost/:id
 ```
 
+## UI Screenshots
+
+
+## Screenshots
+
+
+## Screenshots
+
+### Sign-In Page
+![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/Sign%20in%20page.jpg)
+### Sign Up Page
+![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/sign%20up.jpg)
+### Feed Page
+![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/Feedpage.jpg)
+### Forum Creation Page
+![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/forum_creation.jpg)
+### Profile Page showcasing the Created Forums
+![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/profile_page_after_forum_creation.jpg)
+### Post Creation Page
+![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/post_creation.jpg)
+### Feed Page showcasing new post creation
+![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/feedpage_after_post_creation.jpg)
+
+
+
+
+
+
+
+
+
+
 
 
