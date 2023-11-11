@@ -114,19 +114,24 @@ http://localhost:4200/newform
 ## Screenshots
 
 ### Sign-In Page
-![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/Sign%20in%20page.jpg)
+![Sign in page](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/ff2bcf5e-bfff-4851-8f20-b6e287851b69)
 ### Sign Up Page
-![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/sign%20up.jpg)
+![sign up](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/727d8955-cc18-4a36-8b7f-bc43bd7cf8b2)
 ### Feed Page
-![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/Feedpage.jpg)
+![Feedpage](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/3ae7a2d3-c1ff-4e1f-8c50-c2a2167908af)
 ### Forum Creation Page
-![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/forum_creation.jpg)
+![forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/f865ca6a-2834-445a-b4c1-92061ba4e19f)
 ### Profile Page showcasing the Created Forums
-![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/profile_page_after_forum_creation.jpg)
+![profile_page_after_forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/30b6141a-2197-44d1-b500-dc018d44191c)
 ### Post Creation Page
-![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/post_creation.jpg)
+![post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/728f70f1-021c-4eda-ab3d-5cadfaea3807)
 ### Feed Page showcasing new post creation
-![App Screenshot](https://github.com/sasirekhasooraj/FandomHub/blob/main/feedpage_after_post_creation.jpg)
+![feedpage_after_post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/516f1e70-ef09-4888-88d0-62abbce89ebd)
+
+
+
+
+
 
 
 
