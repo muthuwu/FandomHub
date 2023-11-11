@@ -73,7 +73,7 @@ Start the server
 #### Home page
 
 ```
- http://localhost:4200
+  http://localhost:4200
 ```
 
 
@@ -93,7 +93,7 @@ Start the server
 ```
 ### To create a new forum 
 ```
-http://localhost:4200/newform 
+  http://localhost:4200/newform 
 ```
 
 #### To view the specific forum and their respective posts
@@ -102,16 +102,10 @@ http://localhost:4200/newform
 ```
 ### To create a post under a specific forum 
 ```
-  :http://localhost:4200/newpost/:id
+  http://localhost:4200/newpost/:id
 ```
 
 ## UI Screenshots
-
-
-## Screenshots
-
-
-## Screenshots
 
 ### Sign-In Page
 ![Sign in page](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/ff2bcf5e-bfff-4851-8f20-b6e287851b69)
