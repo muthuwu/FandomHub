@@ -116,7 +116,7 @@ Start the server
 ### Forum Creation Page
 ![forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/f865ca6a-2834-445a-b4c1-92061ba4e19f)
 ### Profile Page showcasing the Created Forums
-![profile_page_after_forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/30b6141a-2197-44d1-b500-dc018d44191c)
+![profile_page_after_forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/7ee5542d-79b6-4932-8a8a-3e36e0f4d6d2)
 ### Post Creation Page
 ![post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/728f70f1-021c-4eda-ab3d-5cadfaea3807)
 ### Feed Page showcasing new post creation
