@@ -122,8 +122,8 @@ Start the server
 ### Feed Page showcasing new post creation
 ![feedpage_after_post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/516f1e70-ef09-4888-88d0-62abbce89ebd)
 
-
-
+## Demo Link
+This is the vedio that demonstrates the working of our web-app : https://drive.google.com/file/d/1n2F_zTBdS232dOBDYxDDRHQfh-gBFaDk/view?usp=drivesdk
 
 
 
