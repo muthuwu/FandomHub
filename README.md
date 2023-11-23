@@ -73,7 +73,7 @@ Start the server
 #### Home page
 
 ```
- http://localhost:4200
+  http://localhost:4200
 ```
 
 
@@ -93,7 +93,7 @@ Start the server
 ```
 ### To create a new forum 
 ```
-http://localhost:4200/newform 
+  http://localhost:4200/newform 
 ```
 
 #### To view the specific forum and their respective posts
@@ -102,8 +102,39 @@ http://localhost:4200/newform
 ```
 ### To create a post under a specific forum 
 ```
-  :http://localhost:4200/newpost/:id
+  http://localhost:4200/newpost/:id
 ```
+
+## UI Screenshots
+
+### Sign-In Page
+![Sign in page](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/ff2bcf5e-bfff-4851-8f20-b6e287851b69)
+### Sign Up Page
+![sign up](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/727d8955-cc18-4a36-8b7f-bc43bd7cf8b2)
+### Feed Page
+![Feedpage](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/3ae7a2d3-c1ff-4e1f-8c50-c2a2167908af)
+### Forum Creation Page
+![forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/f865ca6a-2834-445a-b4c1-92061ba4e19f)
+### Profile Page showcasing the Created Forums
+![profile_page_after_forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/7ee5542d-79b6-4932-8a8a-3e36e0f4d6d2)
+### Post Creation Page
+![post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/728f70f1-021c-4eda-ab3d-5cadfaea3807)
+### Feed Page showcasing new post creation
+![feedpage_after_post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/516f1e70-ef09-4888-88d0-62abbce89ebd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
