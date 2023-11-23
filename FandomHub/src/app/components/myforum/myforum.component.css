@@ -513,6 +513,8 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .timeline-header {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 10px;
   border-bottom: 1px solid #e2e7eb;
   line-height: 30px
@@ -883,13 +885,11 @@ object {
     display: block;
     vertical-align: middle
 }
-
 img,
 video {
     max-width: 100%;
     height: auto
 }
-
 .space-x-2>:not([hidden])~:not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1735,3 +1735,19 @@ video {
 }
 
 @media(min-width:1536px) {}
+.page-title {
+  font-size: 2rem; /* Adjust the size to match the logo */
+  font-family: 'Times New Roman', serif; /* Use your custom font or a web font */
+  align-content: center !important;
+  padding: 10px;
+  background-color: #F4F4F5;
+}
+
+button {
+  margin-right: 10px !important;
+}
+
+.red-bt {
+  background-color: red;
+}
+

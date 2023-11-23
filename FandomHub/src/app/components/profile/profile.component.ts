@@ -38,4 +38,17 @@ export class ProfileComponent implements OnInit{
     createNewForum() {
       this.router.navigateByUrl("/newforum");
     }
+
+    goToEditProfile() {
+      this.router.navigateByUrl("/editprofile");
+    }
+
+    deleteAccount() {
+      if(confirm("Are you sure to delete?")) {
+      this.service.deleteUser(this.user.userId).subscribe((data: any) => {
+        console.log(data);
+        this.authservice.logOut();
+      })
+    }
+    }
 }

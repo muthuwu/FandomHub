@@ -55,3 +55,8 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+.page-title {
+  font-size: 2rem; /* Adjust the size to match the logo */
+  font-family: 'Times New Roman', serif; /* Use your custom font or a web font */
+  text-align: center;
+}

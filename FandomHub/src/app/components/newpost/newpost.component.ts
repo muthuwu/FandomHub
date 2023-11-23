@@ -54,7 +54,7 @@ export class NewpostComponent implements OnInit{
             this.forum.posts.push(this.post.postid);
             this.service.updateForum(this.forum).subscribe((data: any) => {
               console.log(data);
-              this.lastidservice.postlastid(this.lastid).subscribe((data: any) => {
+              this.lastidservice.updatelastid(this.lastid).subscribe((data: any) => {
                 console.log(data);
                 alert("New Post Created");
                 this.router.navigateByUrl("/myforum/"+this.forumid);

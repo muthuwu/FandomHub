@@ -1,0 +1,37 @@
+
+<div class="create-forum-form">
+  <div class="form-section">
+    <div class="flex xl:flex-row flex-col items-center page-title text-gray-900 dark:text-white pb-2 mb-2 w-full">
+      Edit Profile
+    </div>
+    <div class="form-field">
+      <label for="oldpass">Enter your Old Password*:</label>
+      <input type="password" name="oldpass" id="oldpass" placeholder="Old Password (Required)" (keyup)="getOldPass($event)" required>
+    </div>
+    <div class="form-field">
+      <label for="forum-fname">First Name:</label>
+      <input type="text" id="forum-fname" placeholder="{{user.firstName}}" (keyup)="getFirstName($event)">
+    </div>
+    <div class="form-field">
+      <label for="forum-lname">Last Name:</label>
+      <input type="text" id="forum-lname" placeholder="{{user.lastName}}" (keyup)="getFirstName($event)">
+    </div>
+    <div class="form-field">
+      <label for="email">Your Email:</label>
+      <input type="email" id="forum-email" placeholder="{{user.email}}" (keyup)="getEmail($event)">
+    </div>
+    <div class="form-field">
+      <label for="user-description">Your Bio:</label>
+      <textarea id="user-description" placeholder="{{user.userDescription}}" (keyup)="getBio($event)"></textarea>
+    </div>
+    <div class="form-field">
+      <label for="pass">Enter your New Password:</label>
+      <input type="password" name="pass" id="pass" placeholder="New Password" (keyup)="getPass($event)"/>
+    </div>
+    <div class="form-field">
+        <label for="re-pass">Re-enter your New Password:</label>
+        <input type="password" name="re_pass" id="re_pass" placeholder="Re-enter your New Password" (keyup)="get2ndPass($event)"/>
+    </div>
+    <button id="submit-forum-btn" (click)="editProfile()">Submit</button>
+  </div>
+</div>

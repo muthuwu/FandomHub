@@ -16,8 +16,12 @@ export class LastidService {
     return this.http.get<Lastid>(`${this.baseurl}`+"getlastid");
   }
 
-  postlastid(lastid: Lastid) {
+  updatelastid(lastid: Lastid) {
     return this.http.put(`${this.baseurl}updatelastid`, lastid, {responseType: 'text' as 'json'});
+  }
+
+  createlastid(lastid: Lastid) {
+    return this.http.post(`${this.baseurl}createlastid`, lastid, {responseType: 'text' as 'json'});
   }
 
 }

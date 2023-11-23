@@ -5,4 +5,5 @@ export class Forums {
   forumdesc!: string;
   posts!: number[];
   followers!: number[];
+  ui!: number;
 }

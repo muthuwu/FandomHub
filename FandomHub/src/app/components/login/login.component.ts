@@ -15,7 +15,7 @@ import { ProfileserviceService } from 'src/app/services/profileservice.service';
 })
 export class LoginComponent implements OnInit{
   ngOnInit(): void {
-    
+
   }
   constructor (private service: AuthenticationService, private profservice: ProfileserviceService, private lastidservice: LastidService, private router: Router) {
 
@@ -67,8 +67,10 @@ export class LoginComponent implements OnInit{
 
   signup() {
     this.lastidservice.getlastid().subscribe((ids: Lastid) => {
+      if (ids) {
       this.lastids = ids;
       this.user.userId = this.lastids.userid + 1;
+
     if (this.user.firstName && this.user.lastName && this.user.email && this.passup && this.pass2ndup && this.user.userDescription){
       if (this.passup === this.pass2ndup) {
         this.user.password = this.passup;
@@ -77,7 +79,7 @@ export class LoginComponent implements OnInit{
         this.profservice.newUser(this.user).subscribe((data: any) => {
           console.log(data);
           this.lastids.userid = this.lastids.userid + 1;
-          this.lastidservice.postlastid(this.lastids).subscribe((res: any) => {
+          this.lastidservice.updatelastid(this.lastids).subscribe((res: any) => {
             console.log(res);
             alert("Signed Up");
             this.router.navigateByUrl("/login");
@@ -89,6 +91,41 @@ export class LoginComponent implements OnInit{
     } else {
       alert("Enter all the fields");
     }
+      } else {
+        let lastid: Lastid = new Lastid();
+        lastid.id = 1;
+        lastid.userid = 0;
+        lastid.forumid = 0;
+        lastid.postid = 0;
+        lastid.commentid = 0;
+        this.lastidservice.createlastid(lastid).subscribe((data: any) => {
+          console.log(data);
+        })
+        this.lastids = lastid;
+        this.user.userId = this.lastids.userid + 1;
+
+    if (this.user.firstName && this.user.lastName && this.user.email && this.passup && this.pass2ndup && this.user.userDescription){
+      if (this.passup === this.pass2ndup) {
+        this.user.password = this.passup;
+        this.user.premium = true;
+        this.user.followingForums = [];
+        this.profservice.newUser(this.user).subscribe((data: any) => {
+          console.log(data);
+          this.lastids.userid = this.lastids.userid + 1;
+          this.lastidservice.updatelastid(this.lastids).subscribe((res: any) => {
+            console.log(res);
+            alert("Signed Up");
+            this.ngOnInit();
+            this.router.navigateByUrl("/login");
+          })
+        })
+      } else {
+        alert("Entered Passwords doesn't match");
+      }
+    } else {
+      alert("Enter all the fields");
+    }
+      }
   })
 
   }

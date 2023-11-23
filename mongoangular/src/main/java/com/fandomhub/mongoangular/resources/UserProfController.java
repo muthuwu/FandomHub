@@ -95,8 +95,11 @@ public class UserProfController {
 		return myforumsrepo.findById(id);
 	}
 	
-	@DeleteMapping("/deletemyuser/{id}")
+	@DeleteMapping("/deleteuser/{id}")
 	public String deleteMyUser(@PathVariable int id) {
+		commentsrepo.deleteByCommenterid(id);
+		postsrepo.deleteByOwnerid(id);
+		myforumsrepo.deleteByOwnerid(id);
 		userrepo.deleteById(id);
 		return "Deleted user with id: " + id;
 	}

@@ -51,4 +51,8 @@ export class ProfileserviceService {
   updateForum(forum: Forums) {
     return this.http.put(`${this.baseurl}updateforum`, forum, {responseType: 'text' as 'json'});
   }
+
+  deleteUser(id: number) {
+    return this.http.delete(`${this.baseurl}deleteuser/`+id,{responseType: 'text' as 'json'});
+  }
 }

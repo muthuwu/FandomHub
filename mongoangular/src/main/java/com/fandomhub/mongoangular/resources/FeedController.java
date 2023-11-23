@@ -1,6 +1,7 @@
 package com.fandomhub.mongoangular.resources;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -8,6 +9,7 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fandomhub.mongoangular.model.Forums;
 import com.fandomhub.mongoangular.model.Posts;
 import com.fandomhub.mongoangular.model.User;
+import com.fandomhub.mongoangular.repository.CommentsRepository;
 import com.fandomhub.mongoangular.repository.ForumsRepository;
 import com.fandomhub.mongoangular.repository.PostsRepository;
 import com.fandomhub.mongoangular.repository.UserRepository;
@@ -34,6 +37,9 @@ public class FeedController {
 	
 	@Autowired
 	private PostsRepository postsrepo;
+	
+	@Autowired
+	private CommentsRepository commentsrepo;
 	
 	@GetMapping("/getfollowingforums/{id}")
 	public List<Optional<Forums>> getFollowingForums(@PathVariable int id) {
@@ -69,8 +75,8 @@ public class FeedController {
 		return posts;
 	}
 	
-	@PutMapping("/follownewforum")
-	public String followNewForum(@RequestBody Forums forum) {
+	@PutMapping("/followunfollowforum")
+	public String followUnfollowForum(@RequestBody Forums forum) {
 		this.forumsrepo.save(forum);
 		return "Forum Followers Updates";
 	}
@@ -79,4 +85,11 @@ public class FeedController {
 	public List<Forums> getAllForums() {
 		return forumsrepo.findAll();
 	}
+	
+	@PutMapping("/updatepost")
+	public String updatePost(@RequestBody Posts post) {
+		this.postsrepo.save(post);
+		return "Updated Post with id: " + post.getPostid();
+	}
+	
 }

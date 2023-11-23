@@ -22,6 +22,7 @@ export class NewforumComponent implements OnInit{
   forum: Forums = new Forums;
   lastid!: Lastid;
   user!: UserProfile;
+  ui!: number;
 
   getName(event: any) {
     this.forum.forumtitle = event.target.value;
@@ -32,18 +33,19 @@ export class NewforumComponent implements OnInit{
   }
 
   createForum() {
-    if (this.forum.forumtitle && this.forum.forumdesc) {
+    if (this.forum.forumtitle && this.forum.forumdesc && this.forum.ui) {
       this.forum.posts = [];
       // this.forum.followers = new Set<number>();
       this.forum.followers = [];
       this.forum.ownerid = this.authservice.getUser().userId;
+      // this.forum.ui = this.ui;
       this.lastidservice.getlastid().subscribe((data: Lastid) => {
         this.lastid = data;
         this.forum.forumid = this.lastid.forumid + 1;
         this.lastid.forumid = this.forum.forumid;
         this.service.addForum(this.forum).subscribe((data: any) => {
           console.log(data);
-          this.lastidservice.postlastid(this.lastid).subscribe((data: any) => {
+          this.lastidservice.updatelastid(this.lastid).subscribe((data: any) => {
             console.log(data);
             alert("New Forum Created");
             this.router.navigateByUrl("/profile");
@@ -53,5 +55,9 @@ export class NewforumComponent implements OnInit{
     } else {
       alert("Enter all the details");
     }
+  }
+
+  onRadioChange(ui: number) {
+    this.forum.ui = ui;
   }
 }

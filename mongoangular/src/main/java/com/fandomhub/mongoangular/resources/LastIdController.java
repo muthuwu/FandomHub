@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,12 +23,21 @@ public class LastIdController {
 	
 	@GetMapping("/getlastid")
 	public Optional<lastid> getLastId() {
-		return lastidrepo.findById(1);
+		if (lastidrepo.findById(1)!=null) {
+			return lastidrepo.findById(1);
+		}
+		return null;
 	}
 	
 	@PutMapping("/updatelastid")
 	public String updateLastId(@RequestBody lastid lastids) {
 		lastidrepo.save(lastids);
 		return "Lastid updated";
+	}
+	
+	@PostMapping("/createlastid")
+	public String createLastId(@RequestBody lastid lastids) {
+		lastidrepo.save(lastids);
+		return "Lastid created";
 	}
 }

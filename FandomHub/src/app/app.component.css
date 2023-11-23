@@ -101,7 +101,7 @@ button,
 
 .hello:hover
 {
-    background-color: #a1a1aa;
+    background: #f7f7f7;
 }
 
 legend {
@@ -1103,11 +1103,13 @@ video {
 }
 @media(min-width:1536px) {}
 .font-logo {
+  /* margin-left: 10px; */
   font-size: 2rem; /* Adjust the size to match the logo */
-  font-family: 'YourCustomFont', sans-serif; /* Use your custom font or a web font */
+  font-family: 'Times New Roman', serif; /* Use your custom font or a web font */
   /* Add any additional styling, such as color or text shadow */
 }
 
 .routeroutlet {
   margin-top: 65px !important;
+  padding: 5px !important;
 }

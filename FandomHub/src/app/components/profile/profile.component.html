@@ -1,32 +1,4 @@
-<!-- <div class="container">
-	<div class="profile-header">
-		<div class="profile-pic">
-			<img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Bryan King" />
-		</div>
-		<div class="profile-info">
-			<h1>{{user.firstName}} {{user.lastName}}</h1>
-			<p>{{user.userDescription}}</p>
-			<p>{{user.email}}</p>
-			<button class="follow">Edit</button>
-			<div class="collapse">
-				<div class="links">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="content" *ngFor="let forum of forums">
-    <h3>{{forum.forumtitle}}</h3>
-		<div class="posts">
-			<div class="post">
-				<div class="text">{{forum.forumdesc}}</div>
-        <div class="post-ribbon">
-					<button (click)="goToMyForum(forum.forumid)">Go In</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
-
+<!--
   <div class="container bootstrap snippets bootdey">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
@@ -38,6 +10,7 @@
                           <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
                       </a>
                       <h1>{{user.firstName}} {{user.lastName}}</h1>
+                      <h3>{{user.userDescription}}</h3>
                   </div>
 
                   <ul class="nav nav-pills nav-stacked">
@@ -50,9 +23,6 @@
           <div class="profile-info col-md-9">
               <div class="panel">
                 <app-header></app-header>
-                  <div class="bio-graph-heading">
-                      {{user.userDescription}}
-                  </div>
                   <div class="panel-body bio-graph-info">
                       <h1>Bio Graph</h1>
                       <div class="row">
@@ -72,12 +42,11 @@
                   <div class="au-task-list js-scrollbar3">
 
                       <div class="au-task_item au-task_item--warning">
-                          <div class="au-task__item-inner"  *ngFor="let forum of forums">
-                              <h5 class="task">
-                                  <a href="#">{{forum.forumtitle}}</a>
-                              </h5>
+                          <div class="au-task__item-inner"  *ngFor="let forum of forums" (click)="goToMyForum(forum.forumid)">
+                              <h3 class="task">
+                                  {{forum.forumtitle}}
+                              </h3>
                               <span class="time">{{forum.forumdesc}} </span>
-                              <button (click)="goToMyForum(forum.forumid)">Go In</button>
                             </div>
                         </div>
 
@@ -85,4 +54,64 @@
               </div>
           </div>
       </div>
-  </div>
+  </div> -->
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<div class="container">
+
+   <div class="row">
+      <div class="col-md-12">
+         <div id="content" class="content content-full-width">
+            <div class="profile">
+               <div class="profile-header">
+                  <div class="profile-header-cover"></div>
+                  <div class="profile-header-content">
+                    <div class="flex xl:flex-row flex-col items-center page-title text-gray-900 dark:text-white w-full">
+                      My Profile
+                    </div><hr>
+                     <div class="profile-header-img">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                     </div>
+                     <div class="profile-header-info">
+                        <h4 class="m-t-10 m-b-5" class="Name">{{user.firstName}} {{user.lastName}}</h4>
+                        <p class="m-b-8">{{user.userDescription}}</p>
+                        <p class="m-b-8">User Email: {{user.email}}</p>
+                        <p class="m-b-8" *ngIf="user.premium">Premium User<p>
+                          <p class="m-b-8" *ngIf="!user.premium">Not a Premium User<p>
+                          <a class="btn btn-sm btn-info mb-2 button" *ngIf="!user.premium"> <span>&#8593;</span> Upgrade Account</a>
+                        <a class="btn btn-sm btn-info mb-2 button" (click)="goToEditProfile()"> <i class="fa fa-edit"></i> Edit Profile</a>
+                        <a class="btn btn-sm btn-info mb-2 button" (click)="createNewForum()"> <i class="fa fa-plus"></i> Create New Forum</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="profile-content">
+               <div class="tab-content p-0">
+                  <div class="tab-pane fade active show" id="profile-post">
+                     <ul class="timeline">
+                        <li class="list"  *ngFor="let forum of forums" (click)="goToMyForum(forum.forumid)">
+                           <div class="timeline-body">
+                              <div class="timeline-header">
+                                 <span class="username">{{forum.forumtitle}} <small></small></span>
+                                 <span class="pull-right text-muted">{{forum.followers.length}} Followers</span>
+                              </div>
+                              <div class="timeline-content">
+                                 <p>
+                                  {{forum.forumdesc}}
+                                 </p>
+                              </div>
+                              <hr>
+                           </div>
+                        </li>
+                        </ul>
+               </div>
+            </div>
+         </div>
+         <div class="delete-button">
+          <button (click)="deleteAccount()">Delete Account</button>
+         </div>
+      </div>
+   </div>
+</div>

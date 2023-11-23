@@ -1,10 +1,32 @@
 
 <div class="create-forum-form">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
   <div class="form-section">
-    <h2>Create a New Forum</h2>
+    <div class="flex xl:flex-row flex-col items-center page-title text-gray-900 dark:text-white pb-2 mb-2 w-full">
+      Create New Forum
+    </div>
     <div class="form-field">
       <label for="forum-name">Forum Name:</label>
       <input type="text" id="forum-name" placeholder="Enter Forum Name" (keyup)="getName($event)">
+    </div>
+    <!-- your-component.component.html -->
+    <div class="form-field">
+      <label for="options">UI Customisation:</label>
+      <label>
+        <input type="radio" name="options" value="option1" (change)="onRadioChange(0)"> Classic
+      </label>
+
+      <label>
+        <input type="radio" name="options" value="option1" (change)="onRadioChange(1)"> Techie Theme
+      </label>
+
+      <label>
+        <input type="radio" name="options" value="option2" (change)="onRadioChange(2)"> Halloween Theme
+      </label>
+
+      <label>
+        <input type="radio" name="options" value="option3" (change)="onRadioChange(3)"> Barbie Theme
+      </label>
     </div>
     <div class="form-field">
       <label for="forum-description">Forum Description:</label>

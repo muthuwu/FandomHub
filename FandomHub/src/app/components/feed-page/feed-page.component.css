@@ -884,6 +884,7 @@ object {
     vertical-align: middle
 }
 
+
 img,
 video {
     max-width: 100%;
@@ -1735,3 +1736,11 @@ video {
 }
 
 @media(min-width:1536px) {}
+
+.page-title {
+  font-size: 2rem; /* Adjust the size to match the logo */
+  font-family: 'Times New Roman', serif; /* Use your custom font or a web font */
+  align-content: center !important;
+  padding: 10px;
+  background-color: #F4F4F5;
+}

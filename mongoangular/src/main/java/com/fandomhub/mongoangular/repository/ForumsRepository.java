@@ -8,5 +8,6 @@ import com.fandomhub.mongoangular.model.Forums;
 
 public interface ForumsRepository extends MongoRepository<Forums, Integer>{
 	public List<Forums> findByOwnerid(int ownerid);
+	public void deleteByOwnerid(int ownerid);
 	
 }

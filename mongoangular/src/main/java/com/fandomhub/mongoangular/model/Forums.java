@@ -26,10 +26,11 @@ public class Forums {
 	private String forumdesc;
 	private Set<Integer> posts;
 	private Set<Integer> followers;
+	private int ui;
 	
 	
 	
-	public Forums(int forumid, int ownerid, String forumtitle, String forumdesc, Set<Integer> posts, Set<Integer> followers) {
+	public Forums(int forumid, int ownerid, String forumtitle, String forumdesc, Set<Integer> posts, Set<Integer> followers, int ui) {
 		super();
 		this.forumid = forumid;
 		this.ownerid = ownerid;
@@ -37,9 +38,22 @@ public class Forums {
 		this.forumdesc = forumdesc;
 		this.posts = posts;
 		this.followers = followers;
+		this.ui = ui;
 	}
 
 	
+
+	public int getUi() {
+		return ui;
+	}
+
+
+
+	public void setUi(int ui) {
+		this.ui = ui;
+	}
+
+
 
 	public Set<Integer> getFollowers() {
 		return followers;
