@@ -1,0 +1,152 @@
+
+ <body>
+
+     <div class="main">
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+          <div class="container">
+              <div class="signin-content">
+                  <div class="signin-image">
+                      <figure><img src="https://parade.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk3MzM3ODU4NTU2NTY4Nzc1/marveldisney.jpg" alt="sign in image"></figure>
+                      <a href="#signup" class="signup-image-link">Create an account</a>
+                  </div>
+
+                  <div class="signin-form">
+                      <h2 class="form-title">Sign In</h2>
+                          <div class="form-group">
+                              <label for="phonenumber"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                              <input type="number" name="phonenumber" id="phonenumber" placeholder="Phone Number" (keyup)="setPhonenumber($event)"/>
+                          </div>
+                          <div class="form-group">
+                              <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                              <input type="password" name="your_pass" id="your_pass" placeholder="Password" (keyup)="setPass($event)"/>
+                          </div>
+                          <div class="form-group form-button">
+                              <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" (click)="login()"/>
+                          </div>
+                  </div>
+
+              </div>
+          </div>
+      </section>
+
+  </div>
+         <!-- Sign up form -->
+         <section class="signup" id="signup">
+             <div class="container">
+                 <div class="signup-content">
+                     <div class="signup-form">
+                         <h2 class="form-title">Sign up</h2>
+                             <div class="form-group">
+                                 <label for="firstname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                 <input type="text" name="firstname" id="firstname" placeholder="Your First Name" (keyup)="setFirstNameUp($event)"/>
+                             </div>
+                             <div class="form-group">
+                              <label for="lastname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                              <input type="text" name="lastname" id="lastname" placeholder="Your Last Name" (keyup)="setLastNameUp($event)"/>
+                          </div>
+                          <div class="form-group">
+                            <label for="userdesc"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="userdesc" id="userdesc" placeholder="Your Bio" (keyup)="setUserDescUp($event)"/>
+                        </div>
+                             <div class="form-group">
+                                 <label for="user-phonenumber"><i class="zmdi zmdi-phonenumber"></i></label>
+                                 <input type="number" name="user-phonenumber" id="user-phonenumber" placeholder="Your Phone Number" (keyup)="setPhonenumberUp($event)"/>
+                             </div>
+                             <div class="form-group">
+                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                 <input type="password" name="pass" id="pass" placeholder="Password" (keyup)="setPassUp($event)"/>
+                             </div>
+                             <div class="form-group">
+                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                 <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" (keyup)="set2ndPassUp($event)"/>
+                             </div>
+                             <div class="form-group form-button" [hidden]="otpvisibility">
+                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register" (click)="register()"/>
+                             </div>
+                             <div class="form-group" [hidden]="!otpvisibility">
+                              <label for="otp"><i class="zmdi zmdi-lock-outline"></i></label>
+                               <input type="text" name="otp" id="otp" placeholder="Enter verification OTP" (keyup)="enterOtp($event)">
+                             </div>
+                             <div [hidden]="!otpvisibility">
+                               <input type="submit" name="verifyotp" id="verifyotp" class="form-submit" value="Verify" (click)="verifyMobileOtp()">
+                             </div>
+                     </div>
+                     <div class="signup-image">
+                         <figure><img src="https://parade.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk3MzM3ODU4NTU2NTY4Nzc1/marveldisney.jpg" alt="sing up image"></figure>
+                         <a href="#" class="signup-image-link">I am already member</a>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+
+
+     <!-- JS -->
+     <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+     <!-- <script>
+
+             const signUpForm = document.getElementById("register-form");
+
+             signUpForm.addEventListener("submit", function (event) {
+                 event.preventDefault(); // Prevent the default form submission
+
+                 // Get form input values
+                 const name = document.getElementById("name").value;
+                 const email = document.getElementById("email").value;
+                 const password = document.getElementById("pass").value;
+                 const confirmPassword = document.getElementById("re_pass").value;
+                 const agreeTerm = document.getElementById("agree-term").checked;
+
+                 // Reset error messages
+                 document.getElementById("nameError").textContent = "";
+                 document.getElementById("emailError").textContent = "";
+                 document.getElementById("passwordError").textContent = "";
+                 document.getElementById("confirmPasswordError").textContent = "";
+                 document.getElementById("agreeTermError").textContent = "";
+
+                 let valid = true;
+
+                 // Validate name
+                 if (name.trim() === "") {
+                     document.getElementById("nameError").textContent = "Name is required";
+                     valid = false;
+                 }
+
+                 // Validate email
+                 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                 if (!email.match(emailPattern)) {
+                     document.getElementById("emailError").textContent = "Enter a valid email address";
+                     valid = false;
+                 }
+
+                 // Validate password
+                 if (password.length < 6) {
+                     document.getElementById("passwordError").textContent = "Password must be at least 6 characters long";
+                     valid = false;
+                 }
+
+                 // Confirm password
+                 if (password !== confirmPassword) {
+                     document.getElementById("confirmPasswordError").textContent = "Passwords do not match";
+                     valid = false;
+                 }
+
+                 // Check terms agreement
+                 if (!agreeTerm) {
+                     document.getElementById("agreeTermError").textContent = "You must agree to the terms of service";
+                     valid = false;
+                 }
+
+                 if (valid) {
+                     // If all validation passes, you can submit the form or perform further actions here.
+                     // For now, you can display a success message:
+                     alert("Sign-up successful!");
+                 }
+                 else {
+                     alert("Sign-up Unsuccessful!");
+                 }
+             });
+
+     </script> -->
+ </body>

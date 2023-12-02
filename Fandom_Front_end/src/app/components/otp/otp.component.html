@@ -1,0 +1,13 @@
+<body>
+
+<div class="otp-form">
+  <!-- Mobile OTP Form -->
+  <h2>OTP Verification</h2>
+  <!-- Field to display entered OTP -->
+  <input type="text" id="verificationCode" placeholder="Enter verification code" (keyup)="enterOtp($event)">
+
+  <!-- Button to verify OTP -->
+  <button type="button" (click)="verifyMobileOTP()">VERIFY &amp; PROCEED</button>
+</div>
+
+</body>
