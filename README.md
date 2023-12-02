@@ -108,20 +108,27 @@ Start the server
 ## UI Screenshots
 
 ### Sign-In Page
-![Sign in page](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/ff2bcf5e-bfff-4851-8f20-b6e287851b69)
+![otp](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/12fda008-a093-4fc6-879c-4242184fe715)
 ### Sign Up Page
-![sign up](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/727d8955-cc18-4a36-8b7f-bc43bd7cf8b2)
+![sign_up](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/84ab47c8-6976-4f73-9d7e-62170487c4f9)
 ### Feed Page
-![Feedpage](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/3ae7a2d3-c1ff-4e1f-8c50-c2a2167908af)
+![feed_page](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/2aec2c1f-1090-4bda-9b0d-dba89b3a676d)
+### Feed Page2
+![feed_page2](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/23d05b14-754c-430e-93bb-f944f70b24b3)
+### Feed Page3
+![feed_page3](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/017179d5-0c3c-43dc-8f49-5a75e99d4416)
 ### Forum Creation Page
-![forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/f865ca6a-2834-445a-b4c1-92061ba4e19f)
+![new_forum](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/ad901077-4a67-4e09-b74e-a5c2955993e5)
 ### Profile Page showcasing the Created Forums
-![profile_page_after_forum_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/7ee5542d-79b6-4932-8a8a-3e36e0f4d6d2)
+![myforums](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/bab9df35-2ba0-47b9-aab4-4696e0a18ab0)
 ### Post Creation Page
-![post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/728f70f1-021c-4eda-ab3d-5cadfaea3807)
+![newpost](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/4141d544-97d2-48fd-8023-ae2d0275a733)
 ### Feed Page showcasing new post creation
 ![feedpage_after_post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/516f1e70-ef09-4888-88d0-62abbce89ebd)
-
+### Psoting a Comment
+![comment](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/6ec4a5b6-63a9-4262-a2ff-32bcdad248a9)
+### Delete Post
+![delete_post](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/d56eff09-8ca3-42c6-bcc3-d68dcf2c6d97)
 ## Demo Link
 This is the vedio that demonstrates the working of our web-app : https://drive.google.com/file/d/1n2F_zTBdS232dOBDYxDDRHQfh-gBFaDk/view?usp=drivesdk
 
