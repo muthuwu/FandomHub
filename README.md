@@ -123,9 +123,7 @@ Start the server
 ![myforums](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/bab9df35-2ba0-47b9-aab4-4696e0a18ab0)
 ### Post Creation Page
 ![newpost](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/4141d544-97d2-48fd-8023-ae2d0275a733)
-### Feed Page showcasing new post creation
-![feedpage_after_post_creation](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/516f1e70-ef09-4888-88d0-62abbce89ebd)
-### Psoting a Comment
+### Posting a Comment
 ![comment](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/6ec4a5b6-63a9-4262-a2ff-32bcdad248a9)
 ### Delete Post
 ![delete_post](https://github.com/sasirekhasooraj/FandomHub/assets/27855331/d56eff09-8ca3-42c6-bcc3-d68dcf2c6d97)
